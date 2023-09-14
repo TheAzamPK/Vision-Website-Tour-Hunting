@@ -1,0 +1,190 @@
+/*--------------------------------------------------------------------- 
+import Fonts -
+--------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900&display=swap');
+
+/*****---------------------------------------- 1) 
+ 2) font-family: 'Poppins', sans-serif;
+ ----------------------------------------*****/
+
+
+/*--------------------------------------------------------------------- 
+import Files 
+---------------------------------------------------------------------*/
+
+
+
+
+
+
+
+*
+{
+    padding: 0%;
+    margin: 0%;
+}
+.header{
+    height: 1000px;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(Images/banner1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+.navigation.navbar {
+
+    text-align: center;
+}
+.navigation .navbar-nav.mr-auto li {
+    display: flex;
+    align-items: center;
+}
+.navigation.navbar-dark .navbar-nav .nav-link {
+    margin: 0px 28px;
+    color: #fff;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 400;
+    border-radius: 0px;
+    text-transform: uppercase;
+    border-bottom: #73bd2400 solid 4px;
+    cursor: pointer;
+}
+.navigation.navbar-dark .navbar-nav .nav-link:focus,
+.navigation.navbar-dark .navbar-nav .nav-link:hover {
+    color: #73bd24;
+    border-bottom: #73bd24 solid 4px;
+}
+a#loginNav{
+    padding-left: 10px;
+
+}
+a#registerNav{
+    display: flex;
+
+}
+
+.header img{
+    width: 170px;
+    float: left;
+    margin: -20px;
+}
+.login-btn{
+    width: 80px;
+    margin: 5px;
+    padding: 6px 0;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    background: transparent;
+    color: #fff;
+    align-items: center;
+}
+.login-btn:hover{
+    color: #73bd24;
+}
+div.col-md-2{
+    margin-top: 10px;
+}
+.header h1{
+    padding-top: 260px;
+    padding-bottom: 0px;
+    font-size: 55px;
+}
+.input-group{
+    width: 90%;
+    max-width: 500px;
+    border-radius: 30px;
+    background-color: #fff;
+    margin: auto;
+    padding: 2px;
+}
+input.form-control{
+    border: 0px;
+    border-radius: 30px;
+    margin: 2px;
+    box-shadow: none;
+}
+button.input-group-text{
+    width: 100px;
+    background-image: linear-gradient(#00ff7e,#1f3d90);
+    border: 0;
+    color: #fff;
+    padding: 7px;
+    border-radius: 30px;;
+    box-shadow: none; 
+}
+button.add-btn{
+    width: 223px;
+    margin: 5px;
+    padding: 6px 0;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    background: transparent;
+    color: #fff;
+    align-items: center;
+}
+.add-btn:hover{
+    color: #73bd24;
+}
+
+.form-container {
+    background: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #100ddf5b;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00ff0d6e;
+}

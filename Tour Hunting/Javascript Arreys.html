@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myArrey=[];
+
+        let numberofElements = parseInt(prompt("Enter the number of element in the arrey:"));
+
+        for(let i = 0; i < numberofElements; i++) {
+            let userInput = prompt("Enter element" + (i + 1) + ":");
+
+            let element = parseInt(userInput);
+
+            myArrey.push(element);
+        }
+
+        console.log("Arrey elements:" + myArrey);
+    </script>
+</body>
+</html>

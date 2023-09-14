@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TourHunting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./aboutcss.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="css/niceCountryInput.css">
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <style>
+        /* - Header Top */
+        .header-top {
+	background-color: #2a2132;
+	padding-top: 9px;
+	position: relative;
+}
+.header-top::after {
+	border-bottom: 1px solid #2a2132;
+    bottom: -2px;
+    content: "";
+    display: inline-block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+.header-top  span{
+	color: #fff;
+	display: inline-block;	
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+	padding-top: 5px;
+	padding-bottom: 9px;
+    text-transform: uppercase;
+}
+.header-top ul {
+	text-align: right;
+	padding-left: 0;
+}
+.header-top ul li {
+	display: inline-block;
+	margin-right: 5px;
+}
+.header-top ul li:last-of-type {
+	margin-right: 0;
+}
+.header-top ul li a {
+	color: #a1a1a1;
+	font-size: 11px;
+	display: inline-block;
+	height: 28px;
+	width: 29px;
+	line-height: 28px;
+	text-align: center;
+	border: 1px solid #808080;
+	transition: all 1s ease 0s;
+	-webkit-transition: all 1s ease 0s;
+	-moz-transition: all 1s ease 0s;
+	-o-transition: all 1s ease 0s;
+}
+.header-top ul li:hover a {
+	border-color: #4ebceb;
+	color: #4ebceb;
+}
+/* -- Header Top End */
+/* * Section Padding */
+.section-padding {
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+/*------------------------------------------------------------------
+	[Responsive]
+------------------------------------------------------------------*/
+
+
+@media (min-width: 768px){
+    .col-md-7{
+        flex: auto;
+        width: 65.0%;
+    }
+}
+
+/* - min-width: 1200 */
+@media (min-width: 1200px) {
+	.container {
+		width: 1200px;
+	}
+}
+
+/* - min-width: 992 */
+@media (min-width: 992px) {
+	
+	/* - Menu Block */
+	.menu-block{
+		background-color: #f3a316;
+		position: relative;
+	}
+	.menu-block::before{
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		background-color: #f3a316;
+		height: 1px;
+		display: inline-block;
+		top: -2px;
+	}	
+	
+	/* - Header ContactInfo Block */
+	.header-contactinfo-block .contactinfo-box:nth-child(3n+1){
+		clear: both;
+	}
+	
+	/* - Footer */
+	.footer-widgetblock .col-md-3:nth-child(4n+1) {
+		clear: both;
+	}
+}
+
+/* - min-width: 992 to max-width: 1199 */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	/* - Header Middle */
+	.header-middle{
+		padding-bottom: 20px;
+	}
+	
+	/* - Header ContactInfo Block */
+	.header-middle .contactinfo-box{
+		padding-left: 22px;
+		margin-right: 12px;
+	}
+	.header-middle .contactinfo-box p a,
+	.header-middle .contactinfo-box p span,
+	.header-middle .contactinfo-box p{
+		font-size: 13px;
+	}
+	
+	.menu-block .menusearch {
+		max-width: 225px;
+	}
+	
+	/* - Footer WidgetBlock */	
+	.ftr-widget .widget-title {
+		font-size: 20px;
+	}
+	
+	/* - Footer Widget:: OpeningHours */
+	.footer-widgetblock .openinghours_widget {
+		padding-left: 15px;
+		padding-right: 30px;
+	}
+	
+	/* - Footer Widget:: Popular DestinationHours */
+	.populardestination_widget img {
+		max-width: 100px;
+	}
+	
+	.ftr-newsletter {
+		padding: 43.5px 40px;
+	}
+	.ftr-newsletter .input-group .form-control {
+		max-width: 440px;
+	}
+}
+
+/* - max-width: 991 */
+@media (max-width: 991px) {
+	/* - Menu Block */
+	.menu-block::before{
+		height: 0;
+	}}
+
+    /* * Section Header */
+.section-header {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	position: relative;
+	padding-bottom: 31px;
+	margin-bottom: 70px;
+}
+.section-header::after {
+	position: absolute;
+	content: "";
+	left: 0;
+	right: 0;
+	background-image: url("images/sectionheader-seprator.png");
+	height: 8px;
+	width: 80px;
+	bottom: 0;
+	margin: 0 auto;
+}
+.section-header h3{
+	color: #333;
+	font-size: 35px;
+	font-weight: 700;
+	line-height: 36px;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 0 0 20px;
+}
+.section-header span {
+	color: #a8a8a8;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: -0.32px;
+}
+img {
+    max-width: 100%;
+	height: auto;
+}
+
+/* * Footer */
+/* - Footer Main */
+.footer-main {
+	overflow: hidden;
+}
+.footer-widgetblock {
+	background-color: #1b1b1b;
+	position: relative;
+	padding-bottom: 90px;
+}
+.footer-widgetblock::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	right: 0;
+	top: -90px;
+	bottom: 0;
+	background: url("images/footer-bg.png");
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+.footer-widgetblock .row{
+	padding-top: 90px;	
+}
+
+/* - Footer:: Footer Widget */
+.ftr-widget {
+	margin-bottom: 30px;
+}
+
+/* - Footer:: Widget Title */
+.ftr-widget .widget-title {
+	position: relative;
+	color: #fff;
+	font-size: 22px;
+	font-weight: 600;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 0 0 30px;
+	padding-bottom: 23px;	
+	word-wrap: break-word;
+}
+.ftr-widget .widget-title::after {
+	content: "";
+	background-color: #3abefb;
+	height: 3px;
+	width: 50px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.ftr-widget .widget-title span {
+	color: #f3a316;
+}
+
+/* - Footer :: About Widget */
+.footer-widgetblock .about_widget p{
+	color: #dadada;
+	font-size: 15px;
+	line-height: 25px;
+}
+.footer-widgetblock .about_widget ul {
+	padding-left: 0;
+	margin-bottom: 0;
+	display: block;
+	margin-top: 35px;
+}
+.footer-widgetblock .about_widget ul li {
+	display: inline-block;
+	margin-right: 4px;
+}
+.footer-widgetblock .about_widget ul li:last-of-type {
+	margin-right: 0;
+}
+.footer-widgetblock .about_widget ul li a {
+	width: 37px;
+	height: 37px;
+	line-height: 37px;
+	text-align: center;
+	background-color: #313131;
+	font-size: 15px;
+	color: #fff;
+	border-radius: 3px;
+	display: inline-block;	
+	position: relative;
+	z-index: 1;
+}
+.footer-widgetblock .about_widget ul li a:before {
+	position: absolute;
+	content: "";
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: 0;
+	background-color: #f3a316;
+	transition: all 1s ease 0s;
+	-webkit-transition: all 1s ease 0s;
+	-moz-transition: all 1s ease 0s;
+	-o-transition: all 1s ease 0s;
+	z-index: -1;
+}
+.footer-widgetblock .about_widget ul li a:hover:before {
+	height: 100%;
+}
+	
+/* - Footer:: Link Widget */
+.footer-widgetblock .link_widget {
+	padding-left: 25px;
+}
+.footer-widgetblock .link_widget a {
+	color: #dadada;
+	line-height: 38px;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-size: 15px;
+	transition: all 1s ease 0s;
+	-webkit-transition: all 1s ease 0s;
+	-moz-transition: all 1s ease 0s;
+	-o-transition: all 1s ease 0s;	
+	display: block;
+	word-wrap: break-word;
+}
+.footer-widgetblock .link_widget a:hover {
+	color: #f3a316;
+	margin-left: 3px;
+}
+	
+/* - Footer:: OpeningHours Widget */
+.footer-widgetblock .openinghours_widget {
+	padding-left: 65px;
+	padding-right: 45px;
+}
+.footer-widgetblock .openinghours_widget p{
+	display: inline-block;
+	width: 100%;
+	color: #dadada;
+	font-size: 15px;
+	line-height: 28px;
+	text-transform: capitalize;
+	float: left;
+	position: relative
+}
+.footer-widgetblock .openinghours_widget p::before{
+	position: absolute;
+	content: "";
+	background-color: #fff;
+	width: 5px;
+	height: 1px;
+	left: 40%;
+	top: 13px;
+}
+.footer-widgetblock .openinghours_widget p span{
+	float: right;
+}
+
+/* - Footer:: Popular DestinationHours Widget */
+.footer-widgetblock .populardestination_widget ul {
+	padding-left: 0;
+	margin-bottom: 0;
+}
+.footer-widgetblock .populardestination_widget ul li {
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-right: 4.5px;
+	position: relative;
+	transition: all 1s ease 0s;
+	-webkit-transition: all 1s ease 0s;
+	-moz-transition: all 1s ease 0s;
+	-o-transition: all 1s ease 0s;
+	position: relative;
+}
+.footer-widgetblock .populardestination_widget ul li:nth-child(2n) {
+	margin-right: 0;
+}
+.footer-widgetblock .populardestination_widget ul li:hover {
+	opacity: 0.5;
+}
+
+/* - Footer:: NewsLetter */
+.ftr-newsletter {
+	background-color: #222;
+	padding: 43.5px 89px;
+	max-width: 1170px;
+	margin: 19px 15px 0;
+}
+.ftr-newsletter h3 {
+	color: #fff;
+	font-size: 24px;
+	line-height: 28px;
+	word-wrap: break-word;
+	text-transform: uppercase;
+	font-family: 'Poppins', sans-serif;
+	float: left;
+	margin: 10px 38px 0 0;
+}
+.ftr-newsletter .input-group {
+	max-width: 693px;
+}
+.ftr-newsletter .input-group .form-control{
+	border-radius: 25px;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-webkit-appearance: none;
+	font-size: 12px;
+	color: #000;
+	background-color: #fff;
+	padding: 0 35px;
+	min-height: 44px;
+	border: none;
+	max-width: 517px;
+}
+/* -- Footer:: NewsLetter Placeholder */
+.ftr-newsletter .input-group ::-webkit-input-placeholder {
+	color: #b0b0b0;   
+	text-transform: uppercase;
+}
+.ftr-newsletter .input-group :-moz-placeholder { /* Firefox 18- */
+	color: #b0b0b0; 
+	text-transform: uppercase;
+}
+.ftr-newsletter .input-group ::-moz-placeholder {  /* Firefox 19+ */
+	color: #b0b0b0;
+	text-transform: uppercase;
+}
+.ftr-newsletter .input-group :-ms-input-placeholder {  
+	color: #b0b0b0; 
+	text-transform: uppercase;
+}
+.ftr-newsletter .input-group .btn {
+	background-color: #f3a316;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	letter-spacing: 0.48px;
+	padding: 8px 33px 5px;
+	border-radius: 30px;
+	min-height: 44px;
+	color: #fff;
+	transition: all 1s ease 0s;
+	-webkit-transition: all 1s ease 0s;
+	-moz-transition: all 1s ease 0s;
+	-o-transition: all 1s ease 0s;	
+	outline: none;
+	word-wrap: break-word;
+}
+.ftr-newsletter .input-group .btn:hover {
+	background-color: #3abefb;
+}
+
+/* - Footer Bottom */
+.footer-bottom {
+	background-color: #111;
+}
+.footer-bottom .col-md-3 span {
+	color: #fff;
+	font-size: 13px;
+	letter-spacing: 0.52px;
+	text-transform: uppercase;
+	margin-top: 25px;
+	display: inline-block;
+}
+
+/* - Footer Menu */
+.footer-menu .ow-navigation {
+	background-color: transparent;
+	float: right;
+}
+.footer-menu .ow-navigation .nav > li {
+	margin-right: 43px;
+}
+.footer-menu .ow-navigation .nav > li:last-of-type {
+	margin-right: 0;
+}
+.footer-menu .ow-navigation .navbar-nav > li > a {
+	font-weight: 400;
+	letter-spacing: 0.48px;	
+}
+.footer-menu .ow-navigation .navbar-nav > li > a::before{
+	height: 0;
+}
+.footer-menu .ow-navigation .navbar-nav > li > a:hover {
+	color: #f3a316;
+}
+/* * PageBanner */
+.pagebanner {
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	min-height: 335px;
+	text-align: center;
+}
+.pagebanner::before {
+	background-color: rgba(0, 0, 0, 0.9);
+	bottom: 0;
+	content: "";
+	display: inline-block;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0
+}
+.pagebanner .container {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-webkit-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+}
+.pagebanner h3 {
+	color: #fff;
+	font-size: 50px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-family: 'Poppins', sans-serif;
+	z-index: 2;
+	word-wrap: break-word;
+	margin: 0;
+}
+
+/* - PageBanner:: ContactUs */
+.pagebanner.contactus {
+	background: url("images/pagebanner-contactus.jpg"); 
+}
+
+/* - PageBanner:: Gallery4Column */
+.pagebanner.gallery4column {
+	background: url("images/pagebanner-gallery4column.jpg"); 
+}
+
+/* - PageBanner:: Gallery3Column */
+.pagebanner.gallery3column {
+	background: url("images/pagebanner-gallery3column.jpg"); 
+}
+
+/* - PageBanner:: AboutUs */
+.pagebanner.aboutus {
+	background: url("images/pagebanner-aboutus.jpg"); 
+}
+
+/* - PageBanner:: Destination */
+.pagebanner.destination {
+	background: url("images/pagebanner-destination.jpg"); 
+}
+
+/* - PageBanner:: Destination Details */
+.pagebanner.destinationdetails {
+	background: url("images/pagebanner-destinationdetails.jpg"); 
+}
+
+/* - PageBanner:: Blog */
+.pagebanner.blog {
+	background: url("images/pagebanner-blog.jpg"); 
+}
+/* - PageBanner:: BlogPost */
+.pagebanner.blogpost {
+	background: url("images/pagebanner-blogpost.jpg"); 
+}
+#index{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(Images/banner1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+    		<!-- Top Header -->
+		<div class="header-top container-fluid no-padding">	
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-6">
+						<span>Welcome to TOUR HUNTING</span>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-6">
+						<ul>
+							<li><a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#" title="GooglePlus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+							<li><a href="#" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div><!-- Top Header /- -->
+
+
+
+
+
+    <!--Navbar-->
+    <section class="header" id="Index">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-1" >
+                    <img src="Images/Logo.png">
+                </div>
+                <div class="col-md-7 col-sm-5" >
+                    <section class="navbar">
+                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarsExample04">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="Index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="AboutUs.html">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#Packages">Packages </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Testimonials.html">clients</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="ContactUs.html">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </section>
+                </div>
+                <div class="col-md-2 col-sm-1">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-4">
+                            <div class="loginNav">
+                                <a href="Log in form.html" id="loginNav">
+                                    <button type="button" class="login-btn">Login</button></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-4">
+                            <div class="register">
+                                <a href="signupform.html" id="registerNav">
+                                    <button type="button" class="login-btn">SignUp</button></a>
+                            </div>
+                        </div>
+                        <div id="logoutNav">
+                            <button type="button" class="login-btn" onclick="logout()">Logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <!--Navbar End-->
+
+
+    <main class="site-main page-spacing">
+		<!-- PageBanner -->
+		<div class="container-fluid no-padding pagebanner aboutus">
+			<div class="container">
+				<h3>About us</h3>
+			</div>
+		</div><!-- PageBanner /- -->	
+
+		<!-- TourInfo -->
+		<div class="container">
+			<div class="tourinfo-section">
+				<div class="section-padding"></div>
+				<div class="col-md-5">
+					<img src="images/tourinfo-men.jpg" alt="tourinfo-men" width="407" height="496"/>
+				</div>
+				<div class="col-md-7 tourinfo-content">
+					<h3>over 10 years experience in tourist expert</h3>
+					<p>Straight ahead and on the track now. We're gonna make our dreams come true. Makin their way the only way they know how that's just a little bit.</p>
+					<div class="row">
+						<div class="col-md-7 col-sm-7 col-xs-6">
+							<ul>
+								<li>This is what we call the Muppet Show</li>
+								<li>Maybe you and me were never meant</li>
+								<li>So get a witch's shawl on broomstick</li>
+								<li>Well we're movin' on up to the east</li>
+								<li>Fightin' the system like modern day</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="section-padding"></div>
+			</div>
+		</div><!-- TourInfo /- -->
+        <br>
+        <br>
+		
+		<!-- Feature Section -->
+		<div class="container-fluid no-padding feature-section">
+			<div class="container">
+				<div class="row">
+					<div class="featurecontent-block col-md-10 col-sm-12">
+						<div class="col-md-6 col-sm-6 feature-box">
+							<span class="icon icon-Headset"></span>
+							<div class="feature-box-content">
+								<h3>24 hours Availality</h3>
+								<p>On my way to where the air is sweet. Can you tell me how to get how to get to Sesame Street and we'll do it.</p>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 feature-box">
+							<span class="icon icon-Shield"></span>
+							<div class="feature-box-content">
+								<h3>Certified tourist</h3>
+								<p>On my way to where the air is sweet. Can you tell me how to get how to get to Sesame Street and we'll do it.</p>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 feature-box">
+							<span class="icon icon-Dollar"></span>
+							<div class="feature-box-content">
+								<h3>No hidden cost</h3>
+								<p>On my way to where the air is sweet. Can you tell me how to get how to get to Sesame Street and we'll do it.</p>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 feature-box">
+							<span class="icon icon-Plaine"></span>
+							<div class="feature-box-content">
+								<h3>Affordable prices</h3>
+								<p>On my way to where the air is sweet. Can you tell me how to get how to get to Sesame Street and we'll do it.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- Feature Section /- -->
+		
+		<!-- Team Section -->
+		<div class="container team-section">
+			<div class="section-padding"></div>
+				<div class="section-header">
+					<h3>our great team</h3>
+					<span>We're gonna make our come true</span>
+				</div>
+				<div class="team-block">
+					<div class="col-md-4 col-sm-4 col-xs-6 teambox">
+						<div class="team-thumb">
+							<img src="images/Teammember2 (1).png" alt="team1" width="370" height="418"/>
+							<ul>
+								<li><a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="GooglePlus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="team-content">
+							<h3>Usama Ali Khan</h3>
+							
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 teambox">
+						<div class="team-thumb">
+							<img src="images/Teammember2 (2).png" alt="team2" width="370" height="418"/>
+							<ul>
+								<li><a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="GooglePlus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="team-content">
+							<h3>Mariam Yousuf</h3>
+							
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 teambox">
+						<div class="team-thumb">
+							<img src="images/Teammember2 (3).png" alt="team3" width="370" height="418"/>
+							<ul>
+								<li><a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="GooglePlus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="team-content">
+							<h3>Syed Romaisa</h3>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="team-block">
+					<div class="col-md-4 col-sm-4 col-xs-6 teambox">
+						<div class="team-thumb">
+							<img src="images/Teammember2 (4).png" alt="team1" width="370" height="418"/>
+							<ul>
+								<li><a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="GooglePlus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="team-content">
+							<h3>Muhammad.azam</h3>
+							
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 teambox">
+						<div class="team-thumb">
+							<img src="images/Teammember2 (5).png" alt="team2" width="370" height="418"/>
+							<ul>
+								<li><a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="GooglePlus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="team-content">
+							<h3>Hasnain Shiekh</h3>
+							
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6 teambox">
+						<div class="team-thumb">
+							<img src="images/Teammember2 (6).png" alt="team3" width="370" height="418"/>
+							<ul>
+								<li><a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="GooglePlus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								<li><a href="#" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="team-content">
+							<h3>Muhammad.Amir</h3>
+							
+						</div>
+					</div>
+				</div>
+			<div class="section-padding"></div>
+		</div><!-- Team Section /- -->
+		
+		
+		<!-- CallOut -->
+		<div class="container-fluid no-padding callout-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 col-sm-7 col-xs-10">
+						<div class="callout-content">
+							<h3>If You Want To Book a tour</h3>
+							<span>Simply Contact Our Team And Get It Done</span>
+							<ul>
+								<li><span class="icon icon-Phone2"></span><a href="tel:1234567896" title="1234567896">(+1) 123 456 7896</a></li>
+								<li><span class="icon icon-Mail"></span><a href="mailto:info@ourdomain.com" title="info@ourdomain.com">info@ourdomain.com</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- CallOut /- -->
+	</main>
+
+    <!-- Footer Main -->
+<footer class="footer-main container-fluid no-padding">	
+    <div class="footer-widgetblock">
+        <!-- Container -->
+        <div class="container">
+            <div class="row">
+                <!-- Widget About -->
+                <aside class="col-md-3 col-sm-6 col-xs-6 ftr-widget about_widget">
+                    <h3 class="widget-title">About our <span> Global</span></h3>
+                    <p>That this group would somehow form a family that's the way we all became the Brady Bunch. Doin' it our way. There's nothing we wont try never heard word.</p>
+                    <ul>
+                        <li><a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#" title="google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        <li><a href="#" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    </ul>
+                </aside><!-- Widget About /- -->
+                    
+                <!-- Widget Link -->
+                <aside class="col-md-2 col-sm-6 col-xs-6 ftr-widget link_widget">
+                    <h3 class="widget-title">useful <span> Links</span></h3>
+                    <a href="aboutus.html" title="About Us">About Us</a>
+                    <a href="#" title="Our Packages">Our Packages</a>
+                    <a href="destination.html" title="Popular Destination">Popular Destination</a>
+                    <a href="#" title="Top Destination">Top Destination</a>
+                    <a href="blog.html" title="Latest News">Latest News</a>
+                    <a href="#" title="Our Gallery">Our Gallery</a>
+                    <a href="contactus.html" title="Contact Us">Contact Us</a>
+                </aside><!-- Widget Link /- -->
+                
+                <!-- Widget OpeningHours -->
+                <aside class="col-md-4 col-sm-6 col-xs-6 ftr-widget openinghours_widget">
+                    <h3 class="widget-title">Opening <span> Hours</span></h3>
+                    <p>Monday<span>9:00AM to 6:00PM</span></p>
+                    <p>Tuesday<span>9:00AM to 6:00PM</span></p>
+                    <p>Wednesday<span>9:00AM to 6:00PM</span></p>
+                    <p>Thursday<span>9:00AM to 6:00PM</span></p>
+                    <p>Friday<span>9:00AM to 6:00PM</span></p>
+                    <p>Saturday<span>9:00AM to 2:00PM</span></p>
+                </aside><!-- Widget OpeningHours/- -->
+                
+                <!-- Widget PopularDestination -->
+                <aside class="col-md-3 col-sm-6 col-xs-6 ftr-widget populardestination_widget">
+                    <h3 class="widget-title">Popular <span> Destination</span></h3>
+                    <ul>
+                        <li><a title="instagram" href="#"><img width="130" height="130" alt="destinaion1" src="images/ftr-populardestinaion1.jpg"></a></li>
+                        <li><a title="instagram" href="#"><img width="130" height="130" alt="destinaion1" src="images/ftr-populardestinaion2.jpg"></a></li>
+                        <li><a title="instagram" href="#"><img width="130" height="130" alt="destinaion1" src="images/ftr-populardestinaion3.jpg"></a></li>
+                        <li><a title="instagram" href="#"><img width="130" height="130" alt="destinaion1" src="images/ftr-populardestinaion4.jpg"></a></li>
+                    </ul>	
+                </aside><!-- Widget PopularDestination /- -->
+                <div class="col-md-12 ftr-newsletter">
+                    <h3>Signup newsletter</h3>
+                    <form>
+                        <div class="input-group">
+                            <input type="text" placeholder="Enter your email address" class="form-control" required>
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn">Sign up now</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!-- Container /- -->
+    </div><!-- Footer WidgetBlock /- -->
+    
+    
+</footer><!-- Footer /- -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    	<!-- JQuery v1.11.3 -->	
+	<script src="./js/html5/jquery.min.js"></script>
+	<script src="js/jquery.ddslick.min.js"></script><!-- For Option Image & decription  -->	
+	<script src="libraries/lib.js"></script><!-- Bootstrap JS File v3.3.5 -->	
+	<script src="libraries/bootstrap-datetimepicker.min.js"></script><!-- Bootstrap DateTimePicker -->
+	<script src="libraries/lightslider-master/lightslider.js"></script><!-- LightSlider -->	
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script><!-- Library - Google Map API -->
+	
+	<!-- Library - Theme JS -->
+	<script src="js/functions.js"></script>
+    <!-- sidebar -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/niceCountryInput.js"></script>
+    <script src="js/custom.js"></script>
+    <script>  AOS.init();</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const authToken = localStorage.getItem("authToken");
+
+            if (authToken) {
+                // Hide login and register nav items
+                document.getElementById("loginNav").style.display = "none";
+                document.getElementById("registerNav").style.display = "none";
+                // Show logout nav item
+                document.getElementById("logoutNav").style.display = "block";
+            } else {
+                // Show login and register nav items
+                document.getElementById("loginNav").style.display = "block";
+                document.getElementById("registerNav").style.display = "block";
+                // Hide logout nav item
+                document.getElementById("logoutNav").style.display = "none";
+            }
+        });
+    </script>
+
+    <script>
+        function logout() {
+            fetch("http://localhost:3000/logout", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                // Optionally, you can include an authorization header if required
+                // headers: {
+                //   "Content-Type": "application/json",
+                //   "Authorization": `Bearer ${authToken}`
+                // },
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Clear the authToken from localStorage
+                        localStorage.removeItem("authToken");
+                        localStorage.removeItem("userRole");
+                        // Optionally, clear the authToken from session
+                        // sessionStorage.removeItem("authToken");
+
+                        // Redirect the user to the desired page
+                        window.location.href = "Traveling Hunters.html"; // Redirect to the home page or any other page
+                    } else {
+                        // Handle the error response if the logout fails
+                        console.error("Logout failed:", response.statusText);
+                    }
+                })
+                .catch(error => {
+                    console.error("An error occurred during logout:", error);
+                });
+        }
+    </script>
+
+</body>
+
+</html>
